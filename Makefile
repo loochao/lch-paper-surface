@@ -11,3 +11,8 @@ clean:
 	rm surface.bbl
 	rm surface.blg
 	rm surface.log
+	rm surface.end
+
+# Super clean
+sclean:
+	rm surface.pdf
