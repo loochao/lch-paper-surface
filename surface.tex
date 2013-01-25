@@ -78,9 +78,9 @@ the generation of photoinduced pressure as a driving mechanism that
 initiates mass transport of the film, and in the second step we study
 the flow of material resulting from the application of this internal
 force. The flow of material is described using the Navier-Stokes
-equations for viscous flow. In this model, one assumes that the
+equations for viscous flow. In the model, one assumes that the
 optical-induced pressure, is large enough to provide a driving force
-for mass tranport, dependent on the intensity and polarization of the
+for mass transport, dependent on the intensity and polarization of the
 light. Finally we compare the model to the specific case of
 As$_2$S$_3$, simulation shows the surface height evolution as a
 function of time agrees with experimental measurements well.
@@ -88,10 +88,9 @@ function of time agrees with experimental measurements well.
 \begin{figure}[!htbp]
   \includegraphics[width=2.45in]{figure/sppic.png}
   \caption{Schematic diagram of the typical experimental setup used to
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                generate surface structure.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Two beams, W1 and W2, interfere on the surface of a thin film of
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                amorphous light-sensitive material, leading
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                to the pictured definitions of the coordinate system and polarization directions.}
+    generate surface structure.Two beams, W1 and W2, interfere on the
+    surface of a thin film of amorphous light-sensitive material, leading
+    to the pictured definitions of the coordinate system and polarization directions.}
   \label{fig:setup}
 \end{figure}
 
@@ -151,9 +150,10 @@ In addition, we assume there are no body forces so $f=0$.
 Combining this information with equation \ref{eq:levstokes} leads to
 \begin{equation}
   \frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x} +v_z\frac{\partial
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                v_x}{\partial z} = - \frac{1}{\rho}\frac{\partial}{\partial
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                x}\left[P(x)-\sigma\frac{\partial^2 h}{\partial x^2}\right]+\nu\frac{\partial^2
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                v_x}{\partial z^2} \mathrm{.} \label{eq:lastfluid}
+ v_x}{\partial z} = - \frac{1}{\rho}\frac{\partial}{\partial
+ x}\left[P(x)-\sigma\frac{\partial^2 h}{\partial
+   x^2}\right]+\nu\frac{\partial^2 v_x}{\partial z^2} \mathrm{.} 
+\label{eq:lastfluid}
 \end{equation}
 The thin film approximation also implies that
 \begin{equation}
@@ -238,7 +238,7 @@ h}{\partial x^3}\right]\right) \mathrm{.}
 \end{equation}
 
 Now the optical induced pressure $P(x)$ is the only quantity that remains
-to be determined. Gvien a of $P(x)$, equation \ref{eq:last} is
+to be determined. Given a of $P(x)$, equation \ref{eq:last} is
 readily solvable by standard numerical methods.
 
 % Accordingly, the final component of this model is
@@ -328,12 +328,12 @@ the time average, we can write the pressure as
 \begin{equation}
   \label{eq:pressure1}
   \begin{split}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                P &= \frac{1}{3}\braket{Trace(\sigma)} \\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &= \frac{1}{3}\braket{\sigma_{xx} + \sigma_{yy} + \sigma_{zz}} \\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &= \frac{\epsilon_0}{3}\braket{E_x(\epsilon_{xx}E_x + \epsilon_{xy}E_y) + E_y(\epsilon_{yx}E_x
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  + \epsilon_{yy}E_y)}\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &= \frac{\epsilon_0}{3}\braket{\epsilon_{xx}E_x^2 + 2
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \epsilon_{xy}E_xE_y + \epsilon_{yy}E_y^2} \mathrm{.}\\
+    P &= \frac{1}{3}\braket{Trace(\sigma)} \\
+    &= \frac{1}{3}\braket{\sigma_{xx} + \sigma_{yy} + \sigma_{zz}} \\
+    &= \frac{\epsilon_0}{3}\braket{E_x(\epsilon_{xx}E_x + \epsilon_{xy}E_y) + E_y(\epsilon_{yx}E_x
+      + \epsilon_{yy}E_y)}\\
+    &= \frac{\epsilon_0}{3}\braket{\epsilon_{xx}E_x^2 + 2
+      \epsilon_{xy}E_xE_y + \epsilon_{yy}E_y^2} \mathrm{.}\\
   \end{split}
 \end{equation}
 
@@ -366,10 +366,10 @@ equation \ref{eq:pressure1} becomes
 \begin{equation}
   \label{eq:pressure}
   \begin{split}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                P(E_x,E_y) &= P(\tilde{E_x},\tilde{E_y})\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                &= \frac{\epsilon_0}{3}\braket{\epsilon_{xx}\tilde{E_x}^2 + 2
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \epsilon_{xy}\tilde{E_x}\tilde{E_y} +
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \epsilon_{yy}\tilde{E_y}^2} \mathrm{.}\\
+    P(E_x,E_y) &= P(\tilde{E_x},\tilde{E_y})\\
+    &= \frac{\epsilon_0}{3}\braket{\epsilon_{xx}\tilde{E_x}^2 + 2
+      \epsilon_{xy}\tilde{E_x}\tilde{E_y} +
+      \epsilon_{yy}\tilde{E_y}^2} \mathrm{.}\\
   \end{split}
 \end{equation}
 
@@ -396,24 +396,24 @@ thin in $z$ direction.
 \section{Simulation}
 \begin{table*}
   \begin{ruledtabular}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \begin{tabular}{l c c c r}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \textbf{Polarization}& $I(x)$                & $\psi(x)$           &$\Delta\phi(x)$ & $P(x)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \hline
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  s-s &$2E_0^2\left(1+\cos2\delta\right)$&$\pi/2$&    $0$ &$(c_1-c_2)2E_0^2\left(1+\cos2\delta\right)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  p-p &$2E_0^2\left(1+\cos2\delta\right)$&$0$&    $0$&$(c_1+c_2)2E_0^2\left(1+\cos2\delta\right)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  s-p&$2E_0^2$&$\pi/4$&$-2\delta$&$2E_0^2\left(c_1+c_3\cos2\delta\right)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  45-135&$2E_0^2$&$\delta$&$-\pi/2$&$2E_0^2\left(c_1+c_2\cos2\delta\right)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  LCP-RCP&$2E_0^2$ &$\delta$&0&$2E_0^2\left(c_1+c_2\cos2\delta+c_3\sin2\delta\right)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  &&&&$=2E_0^2\left(c_1+\sqrt{c_2^2+c_3^2}\sin\left[2\delta+\arctan \left(c_3/c_2\right)\right]\right)$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \end{tabular}
+    \begin{tabular}{l c c c r}
+      \textbf{Polarization}& $I(x)$                & $\psi(x)$           &$\Delta\phi(x)$ & $P(x)$\\
+      \hline
+      s-s &$2E_0^2\left(1+\cos2\delta\right)$&$\pi/2$&    $0$ &$(c_1-c_2)2E_0^2\left(1+\cos2\delta\right)$\\
+      p-p &$2E_0^2\left(1+\cos2\delta\right)$&$0$&    $0$&$(c_1+c_2)2E_0^2\left(1+\cos2\delta\right)$\\
+      s-p&$2E_0^2$&$\pi/4$&$-2\delta$&$2E_0^2\left(c_1+c_3\cos2\delta\right)$\\
+      45-135&$2E_0^2$&$\delta$&$-\pi/2$&$2E_0^2\left(c_1+c_2\cos2\delta\right)$\\
+      LCP-RCP&$2E_0^2$ &$\delta$&0&$2E_0^2\left(c_1+c_2\cos2\delta+c_3\sin2\delta\right)$\\
+      &&&&$=2E_0^2\left(c_1+\sqrt{c_2^2+c_3^2}\sin\left[2\delta+\arctan \left(c_3/c_2\right)\right]\right)$\\
+    \end{tabular}
   \end{ruledtabular}
   \caption{Summary of the photoinduced pressure predicted by equation \ref{eq:final} for
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                various polarization conditions. $I$, $\psi$, and $\Delta\phi$ can easily be derived from
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                the interference of plane waves. $\delta=\frac{2\pi}{\lambda} x\sin\frac{\theta}{2}$ for
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                $\theta$ as in figure \ref{fig:setup}. A trigonometric identity was used to derive the
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                second form of $P(x)$ for LCP-RCP interference in order to show that for all cases
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                considered $P(x)$ can be expressed as twice the intensity of one of the initial beams
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                times the sum of a constant and a sinusoidal oscillation.} \label{tab:theory}
+    various polarization conditions. $I$, $\psi$, and $\Delta\phi$ can easily be derived from
+    the interference of plane waves. $\delta=\frac{2\pi}{\lambda} x\sin\frac{\theta}{2}$ for
+    $\theta$ as in figure \ref{fig:setup}. A trigonometric identity was used to derive the
+    second form of $P(x)$ for LCP-RCP interference in order to show that for all cases
+    considered $P(x)$ can be expressed as twice the intensity of one of the initial beams
+    times the sum of a constant and a sinusoidal oscillation.} \label{tab:theory}
 \end{table*}
 
 % \begin{table*}
@@ -439,7 +439,7 @@ thin in $z$ direction.
 % \end{table*}
 
 To check the validity of the model, we calculate the solution to
-equaiton \ref{eq:last} on a typical holographic setup used to generate
+equation \ref{eq:last} on a typical holographic setup used to generate
 surface structure (see FIG.\ref{fig:setup}).  In the setups,
 everything about the two interfering beams is identical except for the
 direction of their wave vectors and possibly their polarization. The
@@ -449,8 +449,8 @@ written
 \begin{equation}
 e^{i\left(kx-\omega t\right)} \left(
 \begin{array}{c}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \left|E_x\right| e^{i\phi_x}\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \left|E_y\right| e^{i\phi_y}
+\left|E_x\right| e^{i\phi_x}\\
+\left|E_y\right| e^{i\phi_y}
 \end{array}
 \right) \mathrm{,} \label{eq:gene}
 \end{equation}
@@ -518,7 +518,7 @@ the $P(x)$'s can all be represented by the same general
 form. Recalling typically $E_0^2$ has a Gaussian profile, we reexpress
 the pressure as
 \begin{equation}
-  P = p_1 e^{-2\left(x/p_2\right)^2}\left[p_3+\cos\left( p_4 x +p_5\right)\right]
+  P(x) = p_1 e^{-2\left(x/p_2\right)^2}\left[p_3+\cos\left( p_4 x +p_5\right)\right]
   \label{eq:presmod}
 \end{equation}
 where the $p_i$'s are, parameters decided either by the experimental
@@ -530,22 +530,41 @@ a peak of the modulation.  On the other hand, $p_1$ and $p_3$, are
 parameters of the material, whose value are measured by fitting the
 model with the experimental data.
 
-% \begin{figure}[!htbp]
-%   \includegraphics[width=2.45in]{figure/var_para.png}
-%   \caption{Schematic diagram of surface height evolution as a function
-%   of time.}
-%   \label{fig:varPara}
-% \end{figure}
+Figure \ref{fig:h-vs-t} demonstrates the dynamics of light induced
+grating construction of arbitrary materials, each of which is denoted
+by a set of parameters \{$p_1$, $\sigma$, $\eta$\}. Grating amplitudes
+increase as a function of time, due to the accumulation of
+irradiation. However, under the regime of very high surface tension or
+viscosity, we see no increase in the amplitude corresponding to the
+case where the optical-induced forces are not sufficient to overcome
+the energy barrier, as shown in line A. In the figure, curve A and C
+have the same viscosity, but the surface tension in C is lower, so the
+grating heights grow much faster. While the surface tension of B and C
+are the same, the growth rate in C is higher because of its smaller
+viscosity. Comparisons reveal that decreasing either $\eta$
+(viscosity) or $\sigma$ (surface tension) promotes the formation of a
+grating, which agrees with the underlying physics.
+
+\begin{figure}[!htbp]
+  \includegraphics[width=2.5in]{figure/h-vs-t.png}
+  \caption{Plots of maximum grating amplitude evolution versus
+    irradiation fluence (time). Each curve coresponds to a set of
+    material parameters: \{$p_1$, $\sigma$, $\eta$\}. Particularly, the
+    upper curve, generated by \{$p1/\sigma = 0.88 \mu m ^{-1}$, $\sigma/\eta =
+    0.0019 \mu m / s$\}, simulates the response of As$_2$S$_3$. }
+  \label{fig:h-vs-t}
+\end{figure}
 
 \section{Results}
 In order to test our model against a real system, we compare it to an
-experiemental result on As$_2$S$_3$\cite{saliminia}. Setting $c_2 =
+experimental result on As$_2$S$_3$\cite{saliminia}. Setting $c_2 =
 3c_1$ and $c_3 = 2c_1$ begins to approximate Saliminia's qualitative
 description of the observed size ordering. This not only implies the
 well-known anisotropy response of As$_2$S$_3$, when exposed to
-extennal optical field, but also reveals the quantitative
+external optical field, but also reveals the quantitative
 relationship: $\epsilon_{yy} = 4\epsilon_{xx}$, $\epsilon_{xy} =
 \epsilon_{xx}$.
+
 % \footnote[1]{It does not matter that
 % this scheme makes $P(x)$ negative for s-s interference since this
 % serves only to change the phase of the spatial oscillations in the
@@ -553,35 +572,38 @@ relationship: $\epsilon_{yy} = 4\epsilon_{xx}$, $\epsilon_{xy} =
 
 \begin{table}
   \begin{ruledtabular}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \begin{tabular}{l c r}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \textbf{Parameter}&\textbf{Meaning}&\textbf{Value}\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \hline
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \multicolumn{3}{c}{\textbf{Fixed Parameters}}\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $h_0$& Initial Thickness&2 $\mu$m\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $T$& Total Illumination Time&381 s\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $p_2$&Illumination Radius&57 $\mu$m\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $p_3$&Non-Oscillatory Pressure&1\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $p_4$&Modulation Frequency&$2\pi/13$ $\mu$m$^{-1}$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $p_5$&Modulation Phase&$\pi/2$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \multicolumn{3}{c}{\textbf{Free Parameters}}\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $p_1/\sigma$&Relative Pressure Strength&0.88 $\mu$m$^{-1}$\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $\sigma/\eta$&Characteristic Growth Rate&1.9$\times 10^{-3}$ $\mu$m/s\\
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \end{tabular}
+    \begin{tabular}{l c r}
+      \textbf{Parameter}&\textbf{Meaning}&\textbf{Value}\\
+      \hline
+      \multicolumn{3}{c}{\textbf{Fixed Parameters}}\\
+      $h_0$& Initial Thickness&2 $\mu$m\\
+      $T$& Total Illumination Time&381 s\\
+      $p_2$&Illumination Radius&57 $\mu$m\\
+      $p_3$&Non-Oscillatory Pressure&1\\
+      $p_4$&Modulation Frequency&$2\pi/13$ $\mu$m$^{-1}$\\
+      $p_5$&Modulation Phase&$\pi/2$\\
+      \\
+      \multicolumn{3}{c}{\textbf{Free Parameters}}\\
+      $p_1/\sigma$&Relative Pressure Strength&0.88 $\mu$m$^{-1}$\\
+      $\sigma/\eta$&Characteristic Growth Rate&1.9$\times 10^{-3}$ $\mu$m/s\\
+    \end{tabular}
   \end{ruledtabular}
   \caption{Summary of the parameters used in constructing the fit depicted in figure
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                \ref{fig:sinemodzoom}.} \label{tab:sinemod}
+\ref{fig:sinemodzoom}.} \label{tab:sinemod}
 \end{table}
 
 \begin{figure}[!htbp]
-  \includegraphics[width=2in]{figure/sinefigurezoom.png}
-  \caption{The model's fit to a section of a surface relief profile from Saliminia's paper.}
+  \includegraphics[width=2.5in]{figure/sinefigurezoom.png}
+  \caption{The model's fit to a section of a surface relief profile
+    data from \cite{saliminia}. Results generated by model agrees well
+    with experimental measurements, both in amplitude and frequency.}
   \label{fig:sinemodzoom}
 \end{figure}
 
 \begin{figure}[!htbp]
-  \includegraphics[width=2in]{figure/saliminiagrowth.png}
-  \caption{Fluence (time) dependence of maximum surface relief amplitude for the fit in figure \ref{fig:sinemodzoom}. The $x$ axis corrects an apparent typographical error in Saliminia's original paper.}
+  \includegraphics[width=2.5in]{figure/saliminiagrowth.png}
+  \caption{Fluence (time) dependence of maximum surface relief
+    amplitude for the fit in figure \ref{fig:sinemodzoom}.}
   \label{fig:salgrowth}
 \end{figure}
 
@@ -611,15 +633,18 @@ relationship: $\epsilon_{yy} = 4\epsilon_{xx}$, $\epsilon_{xy} =
 % two, $\sigma/\eta$ (a material property) and $p_1/\sigma$ (the relative pressure
 % strength).
 The model parameters are summarized in table
-\ref{tab:sinemod}. Simulation results demonstrate the consistancy
+\ref{tab:sinemod}. Simulation results demonstrate the consistency
 between the model and experiments. Figure \ref{fig:sinemodzoom} shows
 the model's fit to a section of a surface relief profile from
-Saliminia's paper. As we can see, this fit matches both the frequency
-and amplitude over large space given by realistic experimental
-parameters. In order to further verify the quality of
-this model, we compare the time dependence as shown in figure
-\ref{fig:salgrowth}. Here once again we see that with experimental
-uncertainty we have a good fit to the data.
+\cite{saliminia}. This fit matches both the frequency and
+amplitude over large space given by realistic experimental
+parameters. In order to further verify the quality of this model, we
+compare the time dependence of the maximum surface relief amplitude as
+shown in figure \ref{fig:salgrowth}. The grating
+amplitude, as a function of time, is increasing with a decreasing
+rate, until it eventually saturates at higher fluence. Once again we
+see that within experimental uncertainty we have a good fit to the data,
+indicating this approach is reasonable.
 %  As can be seen from figure \ref{fig:salgrowth}, the
 % fit thus produced also displays the correct time dependence. Finally,
 % figure \ref{fig:saldisp} reveals that the model can account for the
@@ -656,11 +681,11 @@ the Navier-Stokes equation to describe the dynamics of surface
 structure change, together with a dipole interaction model to
 calculate the driving force -- the optical-induced pressure. With the
 derived equation of motion, simulation results are obtained, which agree
-with the experiment data well and proved the validity of the model,
-when it is applied chalcogenide material.
+with the experimental data well, demonstrating the validity of the model,
+when applied to chalcogenide materials.
 
-We thank XXX for assistance in preparation of the experiment, and XXX
-for helpful discussions. We gratefully acknowledge support by XXX.
+This work was supported by National Science Foundation (NSF) grant
+EEC-0540832.
 \bibliography{references}
 
 \end{document}
